@@ -1,0 +1,432 @@
+/* --- Global Styles and Typography --- */
+:root {
+    --primary-color: #3f51b5; /* MUST/BrightFuture Blue */
+    --secondary-color: #f5f5f5; /* Light Gray Background */
+    --accent-color: #ff9800; /* Orange for emphasis */
+    --text-color: #333;
+    --border-color: #ccc;
+    --gap-size: 20px;
+    --large-gap-size: 40px;
+    /* Announcement bar color uses Primary Blue for list items and cards */
+    --announcement-bar-color: var(--primary-color);
+    --announcement-bg-color: #e8eaf6; /* Light gray-blue background for items */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h4 {
+    margin-bottom: 0.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Font Size for Welcome to Your Learning Dashboard */
+h2 {
+   
+    font-size: 2.5em; 
+    margin-bottom: 0.5em; 
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+section {
+    padding: 30px 0;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+        background-color: white;
+        padding: 5px;
+    }
+
+.brand h1 {
+    font-size: 2.2em;
+    color: white;
+    margin-bottom: 0;
+}
+
+.brand .tag {
+    font-size: 1em;
+    color: #bdbdbd;
+    margin-top: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: 400;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+    }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+/* --- Main Section - CSS Grid Implementation (TWO COLUMNS) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: var(--large-gap-size);
+    padding: var(--gap-size) 0;
+}
+
+/* Hero Section (Welcome to Your Learning Dashboard) */
+.hero {
+    background-color: var(--secondary-color);
+    padding: var(--gap-size);
+    border-radius: 8px;
+    margin-bottom: var(--gap-size);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+    /* This targets the h2 text */
+    .hero h2 {
+        color: var(--accent-color);
+        font-size: 2.0em; 
+    }
+
+.banner-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+/* Features Section - Flexbox Implementation */
+.features {
+    background-color: #fff;
+    padding: var(--gap-size); 
+    margin-bottom: var(--gap-size);
+    border-radius: 8px;
+    /* Orange Border for Features */
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+    .features h3 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+.flex-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-size);
+}
+
+/* Feature Card Style */
+.card {
+    flex: 1;
+    padding: 20px 20px 20px 15px;
+    background-color: var(--announcement-bg-color);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--announcement-bar-color); /* Primary Blue Bar */
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        background-color: #dbe4f6;
+    }
+
+    .card i {
+        font-style: normal;
+        font-size: 2.5em;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+/* Available Courses (Table) */
+.resources {
+    /* Orange Border for Courses */
+    padding: var(--gap-size); /* Added padding for block effect */
+    margin-bottom: var(--gap-size);
+    border-radius: 8px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect for Course Table Rows */
+.resources table tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* --- Sidebar Styling (Sticky Announcements and Profile Card) --- */
+aside {
+    padding: 0;
+    position: sticky;
+    top: 10px;
+    align-self: start;
+}
+
+    /* Sidebar containers (Announcements and Profile Card) - Already have orange border */
+    aside section, aside article {
+        background-color: #fff;
+        padding: var(--gap-size);
+        margin-bottom: var(--gap-size);
+        border-radius: 8px;
+        border: 2px solid var(--accent-color);
+        box-shadow: none;
+    }
+
+/* Announcement Header Style */
+#announcements {
+    padding-bottom: 0;
+}
+
+    #announcements h3 {
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--border-color);
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+
+.announcement-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--gap-size);
+    padding: 0 var(--gap-size) var(--gap-size);
+}
+
+    /* Announcement List Items - Blue Bar and Light Background */
+    .announcement-list li {
+        background-color: var(--announcement-bg-color);
+        border-left: 5px solid var(--announcement-bar-color); /* Primary Blue Bar */
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-size: 1.05em;
+        line-height: 1.4;
+        border-bottom: none;
+    }
+
+        .announcement-list li:last-child {
+            margin-bottom: 0;
+        }
+
+/* Profile Card Styling */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+    .profile-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border: 3px solid white;
+        box-shadow: 0 0 0 3px var(--primary-color);
+    }
+
+.profile-info h4 {
+    color: var(--text-color);
+}
+
+.profile-info p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 3px 0;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #0d47a1;
+    color: white;
+    padding: var(--gap-size) 0 10px 0;
+    margin-top: 30px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: var(--gap-size);
+}
+
+.col {
+    padding: 10px 0;
+}
+
+    .col h4 {
+        color: var(--accent-color);
+        margin-bottom: 15px;
+        font-size: 1.1em;
+    }
+
+    .col p, .col a, .footer-links a, address {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 0.9em;
+        display: block;
+        margin-bottom: 5px;
+        font-style: normal;
+    }
+
+        .col a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Social Links Styling */
+.social-links {
+    text-align: left;
+}
+
+    .social-links h4 {
+        margin-bottom: 15px;
+    }
+
+    .social-links a img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        margin-left: 0;
+        vertical-align: middle;
+        transition: transform 0.2s;
+    }
+
+        .social-links a img:hover {
+            transform: scale(1.1);
+        }
+
+.copyright {
+    text-align: center;
+    font-size: 0.8em;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: var(--gap-size);
+    }
+
+    aside {
+        position: static;
+        top: auto;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+
+    .col {
+        text-align: center;
+    }
+
+    .footer-links {
+        display: inline-block;
+    }
+
+    .social-links {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        grid-column: auto;
+    }
+}

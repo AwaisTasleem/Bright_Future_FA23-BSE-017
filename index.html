@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BrightFuture — Student Resource Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="brightfuture_logo.png" alt="BrightFuture Logo">
+                <div class="brand">
+                    <h1>BrightFuture Learning Center</h1>
+                    <p class="tag">Student Resource Portal</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#announcements">Announcements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container grid-container">
+
+        <section class="main-content" id="home">
+            <article class="hero">
+                <h2>Welcome to Your Learning Dashboard</h2>
+                <p>Access important resources, stay updated, and manage your academic journey seamlessly.</p>
+                <img class="banner-img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200" alt="Students learning banner">
+            </article>
+
+            <section class="features" id="features">
+                <h3>Key Features</h3>
+                <div class="flex-cards">
+                    <div class="card">
+                        <i>📖</i>
+                        <h4>Online Courses</h4>
+                        <p>Access recorded lectures and study materials anytime.</p>
+                    </div>
+
+                    <div class="card">
+                        <i>💬</i>
+                        <h4>Student Forums</h4>
+                        <p>Engage in discussions and collaborate with peers.</p>
+                    </div>
+
+                    <div class="card">
+                        <i>📥</i>
+                        <h4>Download Notes</h4>
+                        <p>Get lecture slides, notes, and additional resources.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resources" id="courses">
+                <h3>Available Courses</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Duration</th>
+                            <th>Instructor</th>
+                            <th>Mode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML & CSS Fundamentals</td>
+                            <td>6 Weeks</td>
+                            <td>Dr. Shamila Nasreen</td>
+                            <td>Online</td>
+                        </tr>
+
+                        <tr>
+                            <td>JavaScript Basics</td>
+                            <td>8 Weeks</td>
+                            <td>Engr. Asim Javaid</td>
+                            <td>Hybrid</td>
+                        </tr>
+
+                        <tr>
+                            <td>Data Structures</td>
+                            <td>10 Weeks</td>
+                            <td>Ms. Anum Tariq</td>
+                            <td>Online</td>
+                        </tr>
+
+                        <tr>
+                            <td>Web Engineering</td>
+                            <td>16 Weeks</td>
+                            <td>Dr. Shamila Nasreen</td>
+                            <td>Hybrid</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <aside>
+            <section id="announcements">
+                <h3>Announcements</h3>
+                <ul class="announcement-list">
+                    <li>New semester starts on <strong>March 1st</strong>.</li>
+                    <li>Mid-term exams begin <strong>next week</strong>.</li>
+                    <li>Submit assignments by <strong>Friday</strong>.</li>
+                </ul>
+            </section>
+
+            <article class="profile-card">
+                <img src="Screenshot 2025-11-27 205634.png" alt="Student photo">
+                <div class="profile-info">
+                    <h4>Awais Bhatti</h4>
+                    <p>BSc Software Engineering</p>
+                    <p>ID: FA23-BSE-017</p>
+                </div>
+            </article>
+        </aside>
+
+    </main>
+
+    <footer>
+        <div class="container footer-main">
+
+            <div class="col footer-about">
+                <h4>About BrightFuture</h4>
+                <p>We support students with quality resources for academic success at MUST.</p>
+            </div>
+
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#courses">Course Table</a></li>
+                    <li><a href="#announcements">Announcements</a></li>
+                </ul>
+            </div>
+
+            <div class="col" id="contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:chairman.se@must.edu.pk">info@brightfuture.edu.pk</a></p>
+                <p>Phone: +92 300 1112223</p>
+                <address>Allama Iqbal Road, Mirpur-10250 (AJK), Pakistan</address>
+            </div>
+
+            <div class="col social-links">
+                <h4>Follow Us</h4>
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"></a>
+                <a href="#" aria-label="LinkedIn"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> BrightFuture Learning Center. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
